@@ -531,3 +531,74 @@ a // 43
 ++的副作用是（a递增）产生在表达式返回结果之前， a++副作用是产生在表达式返回结果之后
 ```
 
+
+
+### 解构赋值
+
+```
+const obj = {
+	a: 10,
+	b: 20,
+}
+cosnt { a, b } = obj // { a: a, b: b } = obj
+a // 10
+b // 20
+```
+
+
+
+### javascript中的if else 语法
+
+js中只有if()  {} else {} 没用else if
+
+```
+if (a) {
+	//
+} else if (b) {
+	//
+} else {
+	//
+}
+等同于 
+if (a) {
+	//
+} else {
+	if (b) {
+		//
+	} else {
+		//
+	}
+}
+
+if (a) {
+	//
+} else 
+    if (b) {
+    //
+    } else {
+    //
+    }
+
+
+else if就是else没有代码块只影响一行的时候使用的
+```
+
+
+
+### 短路
+
+运算符的优先级
+
+```
+false && false || true // true
+(false && false) || true // true
+false && (false || true) // false
+&&的优先级高于||
+// 
+true ? false : true ? true : false // false
+(true ? false : true) ? true : false // true
+true ? false : (true ? true : false) // false
+
+? : 三元运算符的优先级是从右到左
+```
+
